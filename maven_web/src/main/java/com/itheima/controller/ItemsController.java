@@ -17,6 +17,7 @@ public class ItemsController {
     @RequestMapping("/showItem")
     public String showItem(Model model) {
         Items item = itemService.findById(1);
+        System.out.println(item);
         model.addAttribute("item", item);
         return "itemDetail";
     }
